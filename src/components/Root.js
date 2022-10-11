@@ -5,16 +5,15 @@ import Header from './Header';
 
 export const DataContext = createContext([])
 const Root = () => {
-    const { Data, initialData } = useLoaderData();
-    console.log(Data);
+    const data = useLoaderData()
+    console.log(data);
+    
     return (
-        <>
-            <DataContext.Provider value={Data}>
-                <Header />
-                <Outlet />
-                <Footer />
-            </DataContext.Provider>
-        </>
+        <DataContext.Provider value={data}>
+            <Header />
+            <Outlet />
+            <Footer />
+       </DataContext.Provider>
     );
 };
 
