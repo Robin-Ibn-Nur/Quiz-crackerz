@@ -3,17 +3,15 @@ import { Outlet, useLoaderData } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
 
-export const DataContext = createContext([])
+export const QuizContext = createContext({})
 const Root = () => {
-    const data = useLoaderData()
-    console.log(data);
-    
+    const quiz = useLoaderData().data
     return (
-        <DataContext.Provider value={data}>
+        <QuizContext.Provider value={quiz}>
             <Header />
             <Outlet />
             <Footer />
-       </DataContext.Provider>
+       </QuizContext.Provider>
     );
 };
 
