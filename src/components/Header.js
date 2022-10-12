@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
     return (
-        <header className="p-4 dark:bg-gray-800 dark:text-gray-100">
+        <header className="p-4 dark:bg-gray-800 dark:text-gray-100 w-full">
             <div className="container flex justify-between h-16 mx-auto">
-                <Link aria-label="Back to homepage" className="flex items-center p-2 text-2xl font-semibold sm:text-4xl">
+                <Link aria-label="Back to homepage" className="flex items-center p-2 text-2xl font-semibold sm:text-xl">
                     <FontAwesomeIcon className='mx-8' icon={faCode} />
-
                     Crazy Programmer</Link>
                 <ul className="items-stretch hidden space-x-3 md:flex">
                     <li className="flex">
