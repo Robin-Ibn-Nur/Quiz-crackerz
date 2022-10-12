@@ -3,15 +3,17 @@ import { useLoaderData } from 'react-router-dom';
 
 const QuizOption = () => {
     const quiz = useLoaderData().data;
-    
+
     console.log(quiz.questions);
-    
-    // const data = quiz.map((date, index) => <div>Quiz Number { index + 1}</div>)
-    // console.log(data);
-    
+
+    const display = quiz.questions.map((data, index) => console.log(data, index))
+
+
     return (
         <div>
-            <h1>this is quiz: { }</h1>
+            {
+                quiz.questions.map((data, index) => <div>Quiz Number {index + 1}</div>)
+            }
         </div>
     );
 };
