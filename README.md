@@ -30,6 +30,6 @@ Tailwind Components ->
 [Mamba UI](https://www.mambaui.com/)
 
 ## Other Resources
-
+Banner Photo -> [Freepic](https://www.freepik.com/)
 Icon -> [FontAwesome](https://fontawesome.com/)
 Fevicon  -> [Freepic](https://www.freepik.com/)

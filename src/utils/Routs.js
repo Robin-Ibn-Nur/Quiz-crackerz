@@ -26,7 +26,6 @@ const router = createBrowserRouter([
             {
                 path: '/quiz/:quizId',
                 loader: async ({ params }) => {
-                    console.log(params)
                     // return fetch(`quiz.json/${params.quizId}`)
                     return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
                 },
