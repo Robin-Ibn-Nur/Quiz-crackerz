@@ -1,28 +1,29 @@
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { toast } from 'react-toastify';
+
 
 const Quizes = ({ data, index }) => {
     const { question, correctAnswer } = data
 
-    // console.log(data);
-    // data.map(option=>console.log(option))
+    const clickMe = () => {
+        console.log('ami chi')
+        toast.success({ correctAnswer })
+    }
 
 
-    // question.options.map(option => { })
-    // onClick = {() => handle()}
 
-    const handle = (e,b) => {
-        // console.log(e, b)
-        
-        if (e.value && b.valu) {
-            console.log('correct',e,b)
-            // alert('correct')
-        } else  {
-            console.log('wrong', e, b)
+    const handle = (e, b) => {
+
+
+        if (e === b) {
+            toast.success('WonderFull: Correct Answer', { autoClose: 500 })
+        } else {
+            toast.warning('Info: Wrong answer!', { autoClose: 500 })
         }
-           
-          
-        
+
+
+
         // toast.info('Info: Product Added!', { autoClose: 500 })
     }
 
@@ -32,19 +33,20 @@ const Quizes = ({ data, index }) => {
                 <div>
                     <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-bold pb-6 sm:w-4/6 w-5/6 mx-auto">Question No: {index} - {question}</h1>
                 </div>
-                <FontAwesomeIcon className='hover:cursor-pointer' icon={faEye}></FontAwesomeIcon>
+                <FontAwesomeIcon
+                    className='hover:cursor-pointer' icon={faEye}></FontAwesomeIcon>
             </div>
             <section className="py-6 dark:bg-gray-800 text-white">
                 <div className="container flex flex-col justify-center p-4 mx-auto">
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
-                       
+
                         {
-                            data.options.map(option =>  <button
-                                onClick={() => handle(index,correctAnswer)}
+                            data.options.map((option, index) => <button key={index}
+                                onClick={() => handle(option, correctAnswer)}
                                 className='bg-indigo-500 rounded-lg hover:bg-amber-500 p-5'
                             >{option}</button>)
                         }
-                        
+
                     </div>
                 </div>
             </section>
