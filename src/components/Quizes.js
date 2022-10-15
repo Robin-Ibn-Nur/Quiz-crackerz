@@ -2,25 +2,27 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Quizes = ({ data, index }) => {
-    const { options, question, correctAnswer } = data
+    const { question, correctAnswer } = data
 
     // console.log(data);
-    // data.options.map(option=>console.log(option))
+    // data.map(option=>console.log(option))
 
 
     // question.options.map(option => { })
     // onClick = {() => handle()}
 
-    const handleAddToCart = (index) => {
-        const result = index;
-        console.log(result)
-        if (result === correctAnswer) {
-            // console.log(result,index)
+    const handle = (e,b) => {
+        // console.log(e, b)
+        
+        if (e.value && b.valu) {
+            console.log('correct',e,b)
             // alert('correct')
-        } else {
-            // console.log(result,index)
-            // alert('wrong')
+        } else  {
+            console.log('wrong', e, b)
         }
+           
+          
+        
         // toast.info('Info: Product Added!', { autoClose: 500 })
     }
 
@@ -35,10 +37,10 @@ const Quizes = ({ data, index }) => {
             <section className="py-6 dark:bg-gray-800 text-white">
                 <div className="container flex flex-col justify-center p-4 mx-auto">
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
-                        
+                       
                         {
                             data.options.map(option =>  <button
-                                onClick={()=>handleAddToCart(index,{correctAnswer})}
+                                onClick={() => handle(index,correctAnswer)}
                                 className='bg-indigo-500 rounded-lg hover:bg-amber-500 p-5'
                             >{option}</button>)
                         }

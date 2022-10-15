@@ -9,7 +9,7 @@ const Cart = ({ quiz }) => {
 
     return (
 
-        <Link className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+        <div className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
             <img src={logo} alt="" role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" />
             <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">Quiz Name: {name}</h3>
@@ -20,7 +20,7 @@ const Cart = ({ quiz }) => {
                 <Link to={`/quiz/${id}`}
                     type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">Click</Link>
             </div>
-        </Link>
+        </div>
 
     );
 };
