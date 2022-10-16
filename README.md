@@ -32,4 +32,4 @@ Tailwind Components ->
 ## Other Resources
 -  Banner Photo -> [Freepic](https://www.freepik.com/)
 -  Icon -> [FontAwesome](https://fontawesome.com/)
--  Fevicon  -> [Freepic](https://www.freepik.com/)
+-  Fevicon  -> [flaticon](https://www.flaticon.com/)
