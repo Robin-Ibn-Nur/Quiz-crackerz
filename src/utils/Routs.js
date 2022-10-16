@@ -1,5 +1,4 @@
 import Blog from "../components/Blog";
-import Cart from "../components/Cart";
 import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home";
 import QuizOption from "../components/QuizOption";
@@ -19,7 +18,6 @@ const router = createBrowserRouter([
         children: [
             { path: '/', element: <Home /> },
             { path: '/home', element: <Home /> },
-            { path: '/cart', element: <Cart/> },
             {
                 path: '/statistic',
                 element: <Statistic />,
