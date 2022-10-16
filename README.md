@@ -6,8 +6,8 @@ This is a Quiz site for Programmer.
 
 Navbar Details:
 
-#Home section for default use.
-#Statistic section for recharts.
+*Home section for default use.
+*Statistic section for recharts.
 #About section for ErrorPage.
 #Blog section for answers of questions.
 

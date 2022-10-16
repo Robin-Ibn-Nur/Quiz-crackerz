@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-
-
 const Cart = ({ quiz }) => {
     const {id, name, total, logo } = quiz;
 

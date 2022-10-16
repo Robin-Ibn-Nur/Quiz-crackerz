@@ -23,14 +23,20 @@ const Header = () => {
             >Home</Link>
           </li>
           <li className="flex">
+            <Link to='/topic'
+              aria-label='Topic'
+              title='Topic' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Topics</Link>
+          </li>
+          <li className="flex">
             <Link to='/statistic'
               aria-label='Statistic'
               title='Statistic' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Statistic</Link>
           </li>
+          
           <li className="flex">
             <Link to='/error'
               aria-label='ErrorPage'
-              title='ErrorPage' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Error Page</Link>
+              title='ErrorPage' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">D-Fault-Error Page</Link>
           </li>
           <li className="flex">
             <Link to='/blog'
