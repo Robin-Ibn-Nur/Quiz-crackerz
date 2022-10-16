@@ -13,7 +13,7 @@ Navbar Details:
 
 
 ## Live Link
-Hosted in Netlify -> [Crazy Programmer](https://crazy-programmer.netlify.app/)
+-  Hosted in Netlify -> [Crazy Programmer](https://crazy-programmer.netlify.app/)
 
 ## Using API 
 
@@ -21,12 +21,12 @@ Hosted in Netlify -> [Crazy Programmer](https://crazy-programmer.netlify.app/)
 -  Api for Link (Dynamic) -> [Link](https://openapi.programming-hero.com/api/quiz/${id})
 
 ## React Router Dom v6.4 
-Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
+-  Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
 ## Resources & Credits
 -  CSS Framwork -> [Tailwind](https://tailwindcss.com/)
 
-Tailwind Components -> 
+-  Tailwind Components -> 
 [Mamba UI](https://www.mambaui.com/)
 
 ## Other Resources
