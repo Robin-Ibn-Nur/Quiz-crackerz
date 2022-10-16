@@ -6,10 +6,10 @@ This is a Quiz site for Programmer.
 
 Navbar Details:
 
-#Home section for default use.
-#Statistic section for recharts.
-#About section for ErrorPage.
-#Blog section for answers of questions.
+-  Home section for default use.
+-  Statistic section for recharts.
+-  D-Fault-Error Page section for ErrorPage.
+-  Blog section for answers of questions.
 
 
 ## Live Link
