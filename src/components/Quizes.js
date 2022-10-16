@@ -6,25 +6,19 @@ import { toast } from 'react-toastify';
 const Quizes = ({ data, index }) => {
     const { question, correctAnswer } = data
 
-    const clickMe = () => {
-        console.log('ami chi')
-        toast.success({ correctAnswer })
+    const clickMe = (e) => {
+        toast.dark(e, { autoClose: 500 })
     }
-
-
 
     const handle = (e, b) => {
 
 
         if (e === b) {
-            toast.success('WonderFull: Correct Answer', { autoClose: 500 })
+            toast.success('WonderFull!: Correct Answer!', { autoClose: 500 })
         } else {
-            toast.warning('Info: Wrong answer!', { autoClose: 500 })
+            toast.error('Sorry!: Wrong answer!', { autoClose: 500 })
         }
 
-
-
-        // toast.info('Info: Product Added!', { autoClose: 500 })
     }
 
     return (
@@ -33,7 +27,7 @@ const Quizes = ({ data, index }) => {
                 <div>
                     <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-bold pb-6 sm:w-4/6 w-5/6 mx-auto">Question No: {index} - {question}</h1>
                 </div>
-                <FontAwesomeIcon
+                <FontAwesomeIcon onClick={() => clickMe(correctAnswer)}
                     className='hover:cursor-pointer' icon={faEye}></FontAwesomeIcon>
             </div>
             <section className="py-6 dark:bg-gray-800 text-white">
