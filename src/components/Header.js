@@ -23,9 +23,9 @@ const Header = () => {
             >Home</Link>
           </li>
           <li className="flex">
-            <Link to='/topic'
-              aria-label='Topic'
-              title='Topic' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Topics</Link>
+            <Link to='/cart'
+              aria-label='Cart'
+              title='Cart' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Topics</Link>
           </li>
           <li className="flex">
             <Link to='/statistic'
