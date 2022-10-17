@@ -1,10 +1,19 @@
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 
 const Quizes = ({ data, index }) => {
     const { question, correctAnswer } = data
+
+    const [string, setString] = useState(question)
+    useEffect(() => {
+        const regex = /(<([^>]+)>)/gi;
+        const newString = string.replace(regex, "");
+        setString(newString);
+    }, [string])
+
 
     const clickMe = (e) => {
         toast.dark(e, { autoClose: 500 })
@@ -25,7 +34,7 @@ const Quizes = ({ data, index }) => {
         <div>
             <div className="container flex justify-center mx-auto pt-16">
                 <div>
-                    <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-bold pb-6 sm:w-4/6 w-5/6 mx-auto">Question No: {index} - {question}</h1>
+                    <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-bold pb-6 sm:w-4/6 w-5/6 mx-auto">Question No: {index} - {string}</h1>
                 </div>
                 <FontAwesomeIcon onClick={() => clickMe(correctAnswer)}
                     className='hover:cursor-pointer' icon={faEye}></FontAwesomeIcon>
