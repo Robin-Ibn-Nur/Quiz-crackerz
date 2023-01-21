@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Blog = () => {
+    // blog
     return (
         <div className='my-8'>
             <section className="dark:bg-gray-800 dark:text-gray-100">
